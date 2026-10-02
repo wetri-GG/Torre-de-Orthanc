@@ -9,10 +9,24 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Layout"
-        android:layout_width="409dp"
+        android:layout_width="729dp"
         android:layout_height="729dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="-22dp">
+
+        <ImageButton
+            android:id="@+id/Registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="584dp"
+            android:layout_marginTop="223dp"
+            android:layout_marginEnd="89dp"
+            android:layout_marginBottom="455dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_send" />
 
         <EditText
             android:id="@+id/Identificador"
@@ -42,8 +56,10 @@
             android:entries="@array/Unidad"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <RadioGroup
             android:id="@+id/Grupo"
@@ -56,8 +72,10 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
             <RadioButton
                 android:id="@+id/Armadura"
@@ -79,29 +97,15 @@
             android:id="@+id/Antorcha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="37dp"
-            android:layout_marginTop="354dp"
-            android:layout_marginEnd="276dp"
-            android:layout_marginBottom="327dp"
+            android:layout_marginStart="337dp"
+            android:layout_marginTop="226dp"
+            android:layout_marginEnd="182dp"
+            android:layout_marginBottom="455dp"
             android:text="Llevar Antorcha de Polvorín"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.035"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageButton
-            android:id="@+id/Registro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Antorcha"
-            app:layout_constraintVertical_bias="0.5"
-            app:srcCompat="@android:drawable/ic_menu_send" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
