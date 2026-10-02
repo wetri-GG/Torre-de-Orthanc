@@ -1,6 +1,8 @@
 package com.isengard.fruegas.torredeorthanc
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageButton
@@ -13,6 +15,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    private val TAG = "ciclo"
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -51,9 +55,37 @@ class MainActivity : AppCompatActivity() {
                 }
                 val torch = mutableListOf<String>()
                     if (antorcha.isChecked) torch.add("Antorcha")
-                val resumen = "ID: $id\nUnidad: $unity\nGrupo: $grupo\n" + torch
+                val resumen = "¡Unidad $id enviada al Abismo de Helm!"
+
                 Toast.makeText(this,resumen,Toast.LENGTH_LONG).show()
+                if(!antorcha.isChecked) {
+                    Log.e(TAG, "¡Peligro! Unidad enviada sin fuego")
+                }
             }
         }
+    }
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG, "onStart: Fraguas encendidas")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "onResume: Fraguas resumidas")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG, "onPause: Fraguas pausadas")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "onStop: Fragua Detenida")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy: Fragua destruida")
     }
 }
